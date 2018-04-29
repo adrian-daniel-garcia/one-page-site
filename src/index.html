@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Master title</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/main.css" type="text/css" media="all">
+        <script src="js/zenscroll-min.js"></script>
+        <script src="js/gumshoe-min.js"></script>
+
+    </head>
+    <body>
+        <nav>
+            <div class="nav-title">
+                titulo
+            </div>
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+
+            <div data-gumshoe class="nav-links">
+                    <a href="#page1" class="active">Pagina 1</a> 
+                    <a href="#page2">Pagina 2</a> 
+                    <a href="#page3">Pagina 3</a> 
+                    <a href="#page4">Pagina 4</a>
+            </div>
+        </nav>
+        <div id="page1" class="page">
+            pagina 1
+        </div>
+        <div id="page2" class="page">
+            pagina 2
+        </div>
+        <div id="page3" class="page">
+            pagina 3
+        </div>
+        <div id="page4" class="page">
+            pagina 4
+        </div>
+
+        <script>
+                gumshoe.init({
+                    offset: 50,
+                    scrollDelay: false,
+                });
+
+                document.querySelector(".nav-links").addEventListener("click", function() {
+                    
+                    const navBarCheckBox = document.querySelector("#nav-check");
+
+                    if ( navBarCheckBox.checked === true ) {
+                        navBarCheckBox.checked = false;
+                    };
+
+                    return false;
+                });
+        </script>
+    </body>
+
+</html>
